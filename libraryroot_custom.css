@@ -1,0 +1,393 @@
+@font-face {
+    font-family: 'Terminus';
+    src: url('fonts/TerminusTTF-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --wms-font: 'Terminus', monospace;
+
+    --wms-bg: #0a0a12;
+    --wms-bg-panel: #141420;
+    --wms-bg-raised: #1c1a28;
+
+    --wms-border: #8a6fd4;
+    --wms-border-hover: #b09aff;
+    --wms-border-dim: #4a3d75;
+
+    --wms-text: #d8d0f0;
+    --wms-text-dim: #6a628f;
+
+    --MillenniumText-Font: var(--wms-font), "Motiva Sans", Arial, sans-serif;
+    --MillenniumTextColor-Normal: var(--wms-text);
+    --MillenniumTextColor-Muted: var(--wms-text-dim);
+
+    --GradientColor1: #81399a;
+    --GradientColor2: var(--wms-bg);
+}
+
+.MillenniumWindow_MainSteamWindow body,
+.MillenniumWindow_ContextMenu body {
+    font-family: var(--wms-font);
+    background-color: var(--wms-bg) !important;
+}
+.MillenniumWindow_MainSteamWindow *,
+.MillenniumWindow_ContextMenu * {
+    font-family: var(--wms-font) !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow ::-webkit-scrollbar-thumb,
+.MillenniumWindow_ContextMenu ::-webkit-scrollbar-thumb {
+    background-color: var(--wms-border) !important;
+}
+.MillenniumWindow_MainSteamWindow ::-webkit-scrollbar-thumb:hover,
+.MillenniumWindow_ContextMenu ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow ::-webkit-scrollbar-corner,
+.MillenniumWindow_ContextMenu ::-webkit-scrollbar-corner {
+    background: var(--wms-bg) !important;
+}
+.MillenniumWindow_MainSteamWindow ::selection,
+.MillenniumWindow_ContextMenu ::selection {
+    background: var(--wms-border);
+    color: var(--wms-text);
+}
+
+
+.MillenniumWindow_MainSteamWindow .LocalContentContainer,
+.MillenniumWindow_MainSteamWindow .Library,
+.MillenniumWindow_MainSteamWindow .ScrollContainer,
+.MillenniumWindow_MainSteamWindow .AppDetailsMain,
+.MillenniumWindow_MainSteamWindow .AppDetailsMain > .Container,
+.MillenniumWindow_MainSteamWindow .AppDetailsMain .Body {
+    background-color: var(--wms-bg) !important;
+}
+.MillenniumWindow_MainSteamWindow .LibraryHome.LibraryHome.LibraryHome,
+.MillenniumWindow_MainSteamWindow .LibraryHome,
+.MillenniumWindow_MainSteamWindow .LibraryHome .Panel.Panel.Panel:not(.LibraryItemBox):not(.BoxArt):not(.PortraitImage):not(.GameIcon) {
+    background-color: var(--wms-bg) !important;
+}
+.MillenniumWindow_MainSteamWindow .DGRkX_HYUzbFaqRysWQVi {
+    background-color: var(--wms-bg) !important;
+}
+.MillenniumWindow_MainSteamWindow .ScrollContainer.Glassy,
+.MillenniumWindow_MainSteamWindow .Glassy:not(.PlayBar) {
+    background: var(--wms-bg) !important;
+    backdrop-filter: none !important;
+}
+.MillenniumWindow_MainSteamWindow .Backdrop,
+.MillenniumWindow_MainSteamWindow .BackdropGlass {
+    background: var(--wms-bg) !important;
+    backdrop-filter: none !important;
+    opacity: 1 !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .TitleBar,
+.MillenniumWindow_MainSteamWindow .OuterFrame > .TopBar {
+    background-color: var(--wms-bg-panel) !important;
+}
+.MillenniumWindow_MainSteamWindow .RootMenuButton:hover,
+.MillenniumWindow_MainSteamWindow .MenuButton:hover {
+    background-color: var(--wms-bg-raised) !important;
+    color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow .SuperNavBar {
+    background-color: var(--wms-bg-panel) !important;
+}
+.MillenniumWindow_MainSteamWindow .SuperNavMenu.Selected .MenuButton,
+.MillenniumWindow_MainSteamWindow .SuperNavMenu .MenuButton {
+    color: var(--wms-text) !important;
+}
+.MillenniumWindow_MainSteamWindow .SuperNavMenu.Selected {
+    border-bottom: 2px solid var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow .AccountMenu {
+    border-radius: 0 !important;
+}
+.MillenniumWindow_MainSteamWindow .WalletBalance {
+    color: var(--wms-border-hover) !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .LeftListSizableContainer,
+.MillenniumWindow_MainSteamWindow .LeftListSizableContainer > .Container {
+    background: var(--wms-bg-panel) !important;
+    border-right: 2px solid var(--wms-border) !important;
+    box-sizing: border-box !important;
+}
+.MillenniumWindow_MainSteamWindow .SectionName {
+    color: var(--wms-border-hover) !important;
+    letter-spacing: 1px;
+}
+.MillenniumWindow_MainSteamWindow .SectionCount {
+    color: var(--wms-text-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .SectionRule {
+    display: none !important;
+}
+.MillenniumWindow_MainSteamWindow .CollapseIconParent {
+    outline: none !important;
+}
+.MillenniumWindow_MainSteamWindow .GameListEntryContainer {
+    border: 2px solid transparent !important;
+    border-radius: 0 !important;
+    transition: none !important;
+}
+.MillenniumWindow_MainSteamWindow .GameListEntryContainer:hover {
+    border-color: var(--wms-border-hover) !important;
+    background-color: var(--wms-bg-raised) !important;
+}
+.MillenniumWindow_MainSteamWindow .HomeBox .Bar:hover,
+.MillenniumWindow_MainSteamWindow .CollectionButton:hover {
+    background-color: var(--wms-bg-raised) !important;
+}
+.MillenniumWindow_MainSteamWindow .ReactVirtualized__Grid,
+.MillenniumWindow_MainSteamWindow .ReactVirtualized__List,
+.MillenniumWindow_MainSteamWindow .ReactVirtualized__Grid__innerScrollContainer,
+.MillenniumWindow_MainSteamWindow .LibraryDisplaySizeSmall,
+.MillenniumWindow_MainSteamWindow .LibraryDisplaySizeMedium,
+.MillenniumWindow_MainSteamWindow .LibraryDisplaySizeLarge {
+    background-color: var(--wms-bg) !important;
+}
+.MillenniumWindow_MainSteamWindow .ReactVirtualized__Grid [role="gridcell"] {
+    background-color: var(--wms-bg) !important;
+}
+.MillenniumWindow_MainSteamWindow .PartnerEventRowCapsule_MainImageContainer {
+    border: 2px solid var(--wms-border) !important;
+    border-radius: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+}
+.MillenniumWindow_MainSteamWindow .PartnerEventRowCapsule:hover .PartnerEventRowCapsule_MainImageContainer {
+    border-color: var(--wms-border-hover) !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .SearchBar,
+.MillenniumWindow_MainSteamWindow .GameListHomeAndSearch input[type="text"],
+.MillenniumWindow_MainSteamWindow input[type="text"],
+.MillenniumWindow_MainSteamWindow input[type="search"] {
+    background-color: var(--wms-bg-raised) !important;
+    outline: 2px solid var(--wms-border) !important;
+    outline-offset: -2px;
+    border: none !important;
+    border-radius: 0 !important;
+    color: var(--wms-text) !important;
+}
+.MillenniumWindow_MainSteamWindow .FilterBucket {
+    border-bottom: 1px solid var(--wms-border-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .FilterBucketLabel {
+    color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow .DialogCheckbox_Container {
+    border: 1px solid var(--wms-border-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .DialogDropDown {
+    background-color: var(--wms-bg-raised) !important;
+    outline: 2px solid var(--wms-border) !important;
+    outline-offset: -2px;
+    border: none !important;
+    border-radius: 0 !important;
+    color: var(--wms-text) !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .BoxArt,
+.MillenniumWindow_MainSteamWindow .PortraitImage,
+.MillenniumWindow_MainSteamWindow .LibraryItemBox {
+    border: 2px solid var(--wms-border) !important;
+    outline: 2px solid var(--wms-border) !important;
+    outline-offset: -2px;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    background-color: var(--wms-bg-panel) !important;
+    transition: none !important;
+}
+.MillenniumWindow_MainSteamWindow .BoxArt .Image,
+.MillenniumWindow_MainSteamWindow .PortraitImage .Image,
+.MillenniumWindow_MainSteamWindow .LibraryItemBox .Image,
+.MillenniumWindow_MainSteamWindow .GameIcon .Image {
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+.MillenniumWindow_MainSteamWindow .BoxArt:hover,
+.MillenniumWindow_MainSteamWindow .PortraitImage:hover,
+.MillenniumWindow_MainSteamWindow .LibraryItemBox:hover {
+    border-color: var(--wms-border-hover) !important;
+    outline-color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow .GameIcon,
+.MillenniumWindow_ContextMenu .GameIcon {
+    border: 1px solid var(--wms-border-dim) !important;
+    box-sizing: border-box !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .PlayBar {
+    background-color: var(--wms-bg-panel) !important;
+    border-top: 2px solid var(--wms-border) !important;
+}
+.MillenniumWindow_MainSteamWindow .PlayButtonContainer,
+.MillenniumWindow_MainSteamWindow .PlayButtonContainer.Green,
+html body .MillenniumWindow_MainSteamWindow .PlayButtonContainer.PlayButtonContainer.Green.Green {
+    background-color: var(--wms-border) !important;
+    border: 2px solid var(--wms-border-hover) !important;
+    border-radius: 0 !important;
+}
+.MillenniumWindow_MainSteamWindow .PlayButton,
+html body .MillenniumWindow_MainSteamWindow .PlayButton.PlayButton {
+    background-color: var(--wms-border) !important;
+    border-radius: 0 !important;
+}
+.MillenniumWindow_MainSteamWindow .PlayButtonContainer:hover,
+.MillenniumWindow_MainSteamWindow .PlayButtonContainer.Green:hover,
+.MillenniumWindow_MainSteamWindow .PlayButton:hover {
+    background-color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow .GameStat:not(:last-child) {
+    border-right: 1px solid var(--wms-border-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .PlayBarLabel {
+    color: var(--wms-text-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .PlayBarDetailLabel {
+    color: var(--wms-text) !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .ToggleRail,
+html body .MillenniumWindow_MainSteamWindow .ToggleRail.ToggleRail {
+    background-color: var(--wms-bg-raised) !important;
+    border: 1px solid var(--wms-border-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .Toggle.On .ToggleRail,
+html body .MillenniumWindow_MainSteamWindow .Toggle.On.On .ToggleRail.ToggleRail {
+    background-color: var(--wms-border) !important;
+    border-color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow .ToggleSwitch,
+html body .MillenniumWindow_MainSteamWindow .ToggleSwitch.ToggleSwitch {
+    background-color: var(--wms-text) !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .SectionHeader,
+.MillenniumWindow_MainSteamWindow .LabelText {
+    color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow .RightColumnSection {
+    background-color: var(--wms-bg-panel) !important;
+    border: 1px solid var(--wms-border-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .GameDescription {
+    color: var(--wms-text) !important;
+}
+.MillenniumWindow_MainSteamWindow .Association,
+.MillenniumWindow_MainSteamWindow .Name {
+    color: var(--wms-border-hover) !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .Card {
+    outline: 1px solid var(--wms-border-dim) !important;
+    outline-offset: -1px;
+    border: none !important;
+}
+.MillenniumWindow_MainSteamWindow .Badge {
+    border: 2px solid var(--wms-border) !important;
+}
+.MillenniumWindow_MainSteamWindow .DetailsProgressContainer,
+.MillenniumWindow_MainSteamWindow .AchievementProgressContainer {
+    background-color: var(--wms-bg-raised) !important;
+    border: 1px solid var(--wms-border-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .DetailsProgressBar,
+.MillenniumWindow_MainSteamWindow .AchievementProgress {
+    background-color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_MainSteamWindow .DLCArt,
+.MillenniumWindow_MainSteamWindow .Art {
+    outline: 2px solid var(--wms-border) !important;
+    outline-offset: -2px;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .PostTextEntry {
+    background-color: var(--wms-bg-raised) !important;
+    outline: 2px solid var(--wms-border) !important;
+    outline-offset: -2px;
+    border: none !important;
+    border-radius: 0 !important;
+}
+.MillenniumWindow_MainSteamWindow .AppActivityDate {
+    color: var(--wms-text-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .Rule {
+    background-color: var(--wms-border-dim) !important;
+}
+.MillenniumWindow_MainSteamWindow .avatarHolder,
+.MillenniumWindow_ContextMenu .avatarHolder {
+    border-radius: 0 !important;
+}
+
+
+.MillenniumWindow_MainSteamWindow .DialogContent,
+.MillenniumWindow_MainSteamWindow .contextMenu,
+.MillenniumWindow_MainSteamWindow .ModalPosition,
+.MillenniumWindow_ContextMenu .DialogContent,
+.MillenniumWindow_ContextMenu .contextMenu,
+.MillenniumWindow_ContextMenu .ContextMenuPopup,
+.MillenniumWindow_ContextMenu .ContextMenuPopupBody,
+.MillenniumWindow_ContextMenu .MenuPopup,
+.MillenniumWindow_ContextMenu .contextMenuContents,
+.MillenniumWindow_ContextMenu .ModalPosition {
+    outline: 2px solid var(--wms-border) !important;
+    outline-offset: -2px;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: var(--wms-bg-panel) !important;
+}
+.MillenniumWindow_MainSteamWindow .DialogBody,
+.MillenniumWindow_ContextMenu .DialogBody {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.MillenniumWindow_MainSteamWindow .DialogButton,
+.MillenniumWindow_ContextMenu .DialogButton,
+.MillenniumWindow_ContextMenu .MenuItem,
+.MillenniumWindow_ContextMenu .Item {
+    color: var(--wms-text) !important;
+}
+.MillenniumWindow_MainSteamWindow .DialogButton {
+    outline: 2px solid var(--wms-border) !important;
+    outline-offset: -2px;
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: var(--wms-bg-panel) !important;
+    transition: none !important;
+}
+.MillenniumWindow_MainSteamWindow .DialogButton:hover {
+    outline-color: var(--wms-border-hover) !important;
+    color: var(--wms-border-hover) !important;
+    background-color: var(--wms-bg) !important;
+}
+.MillenniumWindow_ContextMenu .MenuItem:hover,
+.MillenniumWindow_ContextMenu .Item:hover,
+.MillenniumWindow_ContextMenu .contextMenuItem:hover {
+    background-color: var(--wms-bg-raised) !important;
+    color: var(--wms-border-hover) !important;
+}
+.MillenniumWindow_ContextMenu .Separator {
+    background-color: var(--wms-border-dim) !important;
+}
